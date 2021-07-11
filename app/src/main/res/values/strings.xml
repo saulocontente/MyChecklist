@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyChecklist</string>
+    <string name="inputText">Item</string>
+    <string name="buttonAdd">Add</string>
+    <string name="contentInput">"Input item field"</string>
+    <string name="checkedText">Item</string>
 </resources>
