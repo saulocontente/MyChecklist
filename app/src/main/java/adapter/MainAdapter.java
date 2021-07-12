@@ -3,14 +3,13 @@ package adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckedTextView;
+import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aulaudemy.mychecklist.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import model.Item;
@@ -33,8 +32,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.VH> {
     @Override
     public void onBindViewHolder(@NonNull  MainAdapter.VH holder, int position) {
         Item itemAtPosition = items.get(position);
-        holder.checkedTextView.setChecked(itemAtPosition.getCheckbox());
-        holder.checkedTextView.setText(itemAtPosition.getDescription());
+        holder.checkboxView.setChecked(itemAtPosition.getCheckbox());
+        holder.checkboxView.setText(itemAtPosition.getDescription());
     }
 
     @Override
@@ -46,11 +45,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.VH> {
 
     public class VH extends RecyclerView.ViewHolder {
 
-        CheckedTextView checkedTextView;
+        CheckBox checkboxView;
 
         public VH(@NonNull View itemView) {
             super(itemView);
-            this.checkedTextView = itemView.findViewById(R.id.checkedTextView);
+            this.checkboxView = itemView.findViewById(R.id.checkboxItem);
         }
     }
 }
